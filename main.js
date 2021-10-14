@@ -44,17 +44,18 @@ const displayMovieInfo = () => {
 
 select.addEventListener("change", displayMovieInfo);
 
-// //when you click on of the options you have to call the getInfo function to display all that jazz
+//add the mvie to the review list and then also gotta make what you just typed to appear
 
-// /**innerHTML when the option is clicked
-//  [ ] An h3 with the movie's title appear in the ~display-info~ section of the page.
-//  [ ] A p with the movie's release year.
-//  [ ] A p with the description of the movie.
-//  */
+const list = document.querySelector("#written-review");
+let wrote = document.querySelector("#review");
 
-// /**when the submit button is clicked
-// [ ] The review, inside of an li, with the name of the movie in a strong element and the text of the review afterwards.
-// [ ] The review text should be cleared from the text input.
-// [ ] If the user selects a different dropdown option after making the review, all of the reviews should stay where they are.
+const addReview = () => {
+  let newReview = document.createElement("li");
+  let blah = document.getElementById("review").value;
+  newReview.textContent = `${selectedMovie.title}: ${blah}`;
+  list.append(newReview);
+};
 
-//  */
+//found code online that helped me basically write these lines of code simply in html ((:
+// const submit = document.querySelector("#review-submit");
+// submit.addEventListener("click", addReview);
