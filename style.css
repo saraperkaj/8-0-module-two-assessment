@@ -1,0 +1,13 @@
+div {
+  background-color: lavender;
+  font-family: monospace;
+}
+
+header {
+  background-color: skyblue;
+  /* page's width about 75% */
+}
+
+img {
+  /* img should be the same height of the header */
+}
