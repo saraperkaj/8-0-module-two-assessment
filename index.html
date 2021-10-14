@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div>
+    <div id="page">
       <header>
         <img src="./images/ghibli-logo.png" />
         <h1>Ghibli Review App</h1>
@@ -25,15 +25,18 @@
           <p id="description"></p>
         </section>
         <br />
-        <section id="written-review">
+        <form id="written-review">
           <!-- input box and submit button -->
           Write a review!
           <input id="review" type="text" />
           <!-- <input id="review-submit" type="submit" value="submit" /> -->
-          <button id="#review-submit" type="button" onclick="addReview();">
-            submit
-          </button>
-        </section>
+          <input
+            id="#review-submit"
+            type="submit"
+            onclick="addReview();"
+            value="submit"
+          />
+        </form>
         <br />
         <ul></ul>
       </main>
