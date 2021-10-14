@@ -54,22 +54,11 @@ const addReview = () => {
 
   let newReview = document.createElement("li");
   let input = document.getElementById("review").value;
-  // if (input) {
   // newReview.textContent = `${selectedMovie.title}: ${input}`;
   newReview.innerHTML = `<strong><b>${selectedMovie.title}</strong></b>: ${input}`;
   list.append(newReview);
-  // reset();
-  // } else {
-  //   //review input is = to ''
-  //   input = "";
-  // }
+  list.reset();
 };
-
-// document.querySelector("#page").addEventListener("submit", (event) => {
-//   event.target.reset();
-// });
-
-//this code has to go somewhere for it to work
 
 //found code online that helped me basically write these lines of code simply in html ((:
 // const submit = document.querySelector("#review-submit");
