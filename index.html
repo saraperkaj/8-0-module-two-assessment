@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ghibli Review App</title>
     <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div>
@@ -18,12 +19,23 @@
         <!--placeholder(?) on the label-->
         <select name="movies" id="movies"></select>
         <br />
-        <section id="display-info"></section>
+        <section id="display-info">
+          <h1></h1>
+          <p id="year"></p>
+          <p id="description"></p>
+        </section>
         <br />
         <!-- input box and submit button -->
+        Write a review!
+        <input type="text" />
+        <input type="submit" value="submit" />
         <br />
         <ul></ul>
       </main>
+      <footer>
+        Created By Sev
+        <a href="https://joinpursuit.org">Join Pursuit.</a>
+      </footer>
     </div>
   </body>
 </html>

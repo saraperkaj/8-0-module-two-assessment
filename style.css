@@ -1,11 +1,31 @@
 div {
   background-color: lavender;
   font-family: monospace;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-areas:
+    "head"
+    "main"
+    "foot";
 }
 
 header {
   background-color: skyblue;
+  /* grid-column: 2 / span 3; */
   /* page's width about 75% */
+  grid-area: head;
+}
+
+main {
+  grid-area: main;
+  /* grid-column: 1 / span 4; */
+  text-align: center;
+}
+
+footer {
+  grid-area: foot;
+  text-align: center;
+  /* grid-column: span 2; */
 }
 
 img {
