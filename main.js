@@ -22,47 +22,27 @@ getData().then((movies) => {
 //when that thing is clicked display the info of that movie
 
 const currentTitle = document.querySelector("#display_title");
-const movieName = document.querySelector("h1");
+const movieName = document.querySelector("#title");
 const movieYear = document.querySelector("#year");
 const movieDes = document.querySelector("#description");
 
-// //get the movie titles in the select box
+let selectedMovie;
 
-// function getInfo(movies) {
-//   for (movie of movies) {
-//     console.log(movie.title);
-//     console.log(movie.description);
+const displayMovieInfo = () => {
+  getData().then((movies) => {
+    for (let movie of movies) {
+      if (select.value === movie.title) {
+        selectedMovie = movie;
+        // console.log(movie);
+        movieName.textContent = movie.title;
+        movieYear.textContent = movie.release_date;
+        movieDes.textContent = movie.description;
+      }
+    }
+  });
+};
 
-//     //section #display-info make sure to ge the movie title and then the description
-//     const nameAndDescription = document.querySelector("#display-info");
-//     const movieName = document.createElement("h1");
-//     movieName.textContent = movie.title;
-//     const movieDes = document.createElement("p");
-//     movieDes.textContent = movie.description;
-//     const display = document.querySelector("#display-info");
-//     display.append(movieName);
-//     display.append(movieDes);
-//   }
-// }
-
-// const select = document.querySelector("select");
-
-// document.querySelector("div").addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const movie = e.target.value;
-//   //   console.log(movie, "movie");
-//   fetch("https://ghibliapi.herokuapp.com/films")
-//     .then((response) => response.json())
-//     .then((ghibli) => {
-//       const selector = document.querySelector("#movies");
-//       const movieTitle = movie[i].title;
-//       //   console.log(movieTitle, "Hi");
-
-//       selector.innerHTML = `
-//         <option value="title">${movieTitle}</option>
-//         `;
-//     });
-// });
+select.addEventListener("change", displayMovieInfo);
 
 // //when you click on of the options you have to call the getInfo function to display all that jazz
 
