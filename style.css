@@ -14,20 +14,42 @@ header {
   /* grid-column: 2 / span 3; */
   /* page's width about 75% */
   grid-area: head;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 250px;
+  width: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+header h1 {
+  text-align: center;
+}
+
+header img {
+  /* img should be the same height of the header */
+  /* fill: auto; */
+  /* background-size: cover; */
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
 main {
+  padding-top: 50px;
   grid-area: main;
   /* grid-column: 1 / span 4; */
   text-align: center;
 }
 
+#display-info {
+  padding: 50px;
+}
+
 footer {
+  padding-top: 50px;
   grid-area: foot;
   text-align: center;
   /* grid-column: span 2; */
-}
-
-img {
-  /* img should be the same height of the header */
 }
